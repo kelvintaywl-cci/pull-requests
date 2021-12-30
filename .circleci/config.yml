@@ -8,9 +8,9 @@ jobs:
     steps:
       - run:
           name: Inspect
-          command: echo "I love ${COLOR} builds."
+          command: echo "I love ${FEATURE} builds, with love from ${CIRCLE_SHA1}"
           environment:
-            COLOR: "green"
+            FEATURE: "feat-1"
 
 workflows:
   main:
