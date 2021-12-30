@@ -8,7 +8,7 @@ jobs:
     steps:
       - run:
           name: Inspect
-          command: echo "I love ${FEATURE} builds"
+          command: echo "I love ${FEATURE} builds, with love from ${CIRCLE_SHA1}"
           environment:
             FEATURE: "feat-1"
 
