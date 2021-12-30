@@ -4,9 +4,10 @@ jobs:
   echo:
     docker:
       - image: cimg/base:stable
+    resource_class: small
     steps:
       - run:
-          name: Greet
+          name: Inspect
           command: echo "I love ${COLOR} builds."
           environment:
             COLOR: "green"
