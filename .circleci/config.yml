@@ -1,5 +1,8 @@
 version: 2.1
 
+orbs:
+  continuation: circleci/continuation@0.3.1
+
 jobs:
   echo:
     docker:
@@ -11,6 +14,7 @@ jobs:
           command: echo "I love ${FEATURE} builds, with love from ${CIRCLE_SHA1}"
           environment:
             FEATURE: "feat-1"
+      - continuation/finish
 
 workflows:
   main:
